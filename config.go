@@ -16,6 +16,10 @@ func Init() {
 	checkCriticalErr(err)
 	err = viper.BindEnv("pass", "pass")
 	checkCriticalErr(err)
+	err = viper.BindEnv("host", "host")
+	checkCriticalErr(err)
+	err = viper.BindEnv("port", "port")
+	checkCriticalErr(err)
 
 	if err := viper.ReadInConfig(); err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); ok {
