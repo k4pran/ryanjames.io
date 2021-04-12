@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reinforcement Learning Terms</title>
+</head>
+<body>
+    <div id="explore-reinforcement-learning-terms" class="explore modal">
+        <h3 id="reinforcement-learning-terms-title" class="explore-title">Reinforcement Learning Terms</h3>
+        <hr class="hr-modal">
+        <p class="explore-date">10th April 2021</p>
+
+        <div class="share-icon-row">
+            <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/github-share.png"></a>
+            <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/fb-share.png"></a>
+            <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/twitter-share.png"></a>
+            <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/more-share.png"></a>
+            <a href="#"><img class="share-icon-padding" src="/static/images/more-share.png"></a>
+        </div>
+
+        <ul class="explore-tags-list">
+            <li class="explore-tags">reinforcement learning</li>
+        </ul>
+
+        <h4 class="explore-subtitle">Model-Free / Model-Based</h4>
+
+        <p class="explore-text-block">
+            In reinforcement there are a few concepts important here, the <b>agent</b>, the <b>state</b>
+            and the <b>environment</b>. The agent is of course the one doing the learning, and the environment
+            is not part of the agent, it is external to the agent and you can think of it as the world the agent
+            is acting in. An example is in a game of texas hold 'em you have two players (agents), they can see what cards
+            they are holding, the number of chips they have, the shared cards (flop, turn river) etc. The environment would
+            include information they don't have access to such as the cards in the deck. The state is the information the
+            agent has access to that is provided by the environment. If the agent uses only the state then it is
+            taking a model-free approach, however if it is trying to build a model of the environment and learn the environments
+            'internals', and in doing so predicting the environment's response to the agents actions. A model-free
+            approach instead solely relies on the state provided by the environment.
+
+            The distinction between the two can be quite subtle. A model-based approach relies on some prediction related
+            to the state transitions and the associated rewards. An example of this is an agent that has
+            a model that predicts the next state and associated reward based on some probability distribution.
+            Conversely a model-free approach does not rely on building such a model of the environment
+            to predict state-transitions. It is able to learn how to perform optimal actions based on the
+            current state. It usually does this by assigning or approximating the value of states or learning
+            a policy.
+
+            In both cases learning is involved, sometimes model-based may be to a lesser degree depending on
+            what knowledge it already has of the environment. In a model-based approach it may learn by experience
+            like the model-free approach, however there is an emphasis on building a model of the environment
+            and the reward it will give out. Model-free learning does not try to create a model of the environment
+            but instead learns to rely on the state to make decisions.
+
+            It is easy to think that a model-based approach therefore cannot plan for the future as it doesn't exactly
+            have a model to predict what the future states will be, however it doesn't need to model how the environment
+            goes from one state to the next. It can still learn the total reward of being in a given state and taking a given
+            action and doing the same on the next state and so on. How it does this is beyond the scope but will be discussed
+            in other explorations.
+        </p>
+
+        <pre class="explore-code-block line-numbers"><code class="language-python">
+            TODO
+        </code></pre>
+
+    </div>
+</body>
+</html>

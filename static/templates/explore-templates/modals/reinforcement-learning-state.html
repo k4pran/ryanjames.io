@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classification with pytorch 1</title>
+</head>
+<body>
+<div id="explore-pytorch-classification-iris-1" class="explore modal">
+    <h3 id="pytorch-classification-iris-1-title" class="explore-title">Reinforcement Learning Concepts: State</h3>
+    <hr class="hr-modal">
+    <p class="explore-date">24th November 2019</p>
+
+    <div class="share-icon-row">
+        <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/github-share.png"></a>
+        <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/fb-share.png"></a>
+        <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/twitter-share.png"></a>
+        <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/more-share.png"></a>
+        <a href="#"><img class="share-icon-padding" src="/static/images/more-share.png"></a>
+    </div>
+
+    <ul class="explore-tags-list">
+        <li class="explore-tags">artificial intelligence</li>
+        <li class="explore-tags">reinforcement learning</li>
+        <li class="explore-tags">learning</li>
+        <li class="explore-tags">theory</li>
+    </ul>
+
+    <p class="explore-text-block">
+        Reinforcement learning (RL) shares the concept of state with other areas in artificial intelligence, however in
+        RL in particular it is a core concept. The term is frequently used in RL journals, books and as a variable name
+        passed around in code. It a simple concept in theory but understanding it in a little more depth can be
+        helpful.
+    </p>
+
+    <p class="explore-text-block">
+        The <b>state</b> can be thought of as a snapshot in time of all the 'stuff' in a given environment that is
+        relevant to the agent. As a simple exercise, think how you would define a state in tic tac toe. The state can
+        be made up of the game board and the positions of x's and o's. This state as you can see is external to the
+        agent, however the agent can keep a representation of this state internally. Think of a human agent, the human
+        agent at a given point in time will see the board and positions of x's, o's and empty tiles. The human is likely
+        in a room of seats, other people, tables, sky and numerous other things that are not considered part of the
+        state as these other things are not relevant to the game of tic tac toe. The state can therefore be considered
+        a subset of the environment an agent finds itself in, an abstraction that removes the irrelevant details in
+        the environment.
+    </p>
+
+    <p class="explore-text-block">
+        This leads to the fact that the state is something that needs to be defined in reinforcement learning. It is
+        part of the reinforcement learning model that is being created and careful consideration should be taken to
+        capture everything in the environment that is necessary for an agent to make optimal actions to maximize
+        rewards.
+    </p>
+
+    <p class="explore-text-block">
+        Moving towards more realistic environments, the state cannot be fully defined as an environment may not be fully
+        observable. This means that the state will not give the agent everything that is important to it in making a
+        decision, and so the state that we define may be constrained by the environment our agent is in. This
+        information can allow us to see the concept of state a little differently, as the environment outputs
+        information that may be partial information. We then add a filter to this information, filtering irrelevant
+        information and allowing the unfiltered, useful information to make up the state. This concept has parallels in
+        human attention that acts like a filter in the environment, this filtering being dependent on the current task
+        we are focused on.
+    </p>
+
+    <h4 class="explore-subtitle">Internal State</h4>
+
+    <p class="explore-text-block">
+        Let's take this concept a little further by moving from the information emitted by the environment to an
+        <b>internal state</b> held in memory by the agent. This may seem trivial, however it is an important idea when
+        we discuss the <b>Markov Property</b>. We will not go into much detail regarding the markov property now except
+        to define it informally. A process has the markov property if future states depend only on the present state.
+        This is a desirable property in reinforcement learning as it helps the agent to learn if it only needs to focus on
+        the present state. We therefore do not want to store the history of all states to help us in the decision making
+        process, but instead the current state should by itself be sufficient to take good actions that will maximize
+        future rewards in future states. The internal state of the agent can therefore implicitly account for past
+        states given the cause and effect chain without actually storing past states in memory.
+    </p>
+
+    <p class="explore-text-block">
+        Another feature of the internal state is that it does not necessarily have to be a replica of the state emitted
+        by the environment. An encoding can take place where the emitted state can be <em>encoded</em> into an internal
+        state where the encoded state is a more useful representation of the state than the raw one emitted by the
+        environment.
+    </p>
+
+    <h4 class="explore-subtitle">Enhancing the state with the markov property</h4>
+
+    <p class="explore-text-block">
+        We mentioned before that the markov property is a desirable property for a good state that will make it easier
+        for an agent to make optimal decisions. The markov property is not set in stone and the same task may or may
+        not contain a state with the markov property depending on how the state is encoded. Think of a game of
+        battleships. Think of motion, if we are given a single frame from a video of a ball we cannot tell if it is
+        moving or which direction it is moving. Predicting the next state - where the ball will be - is dependent on
+        what happened in previous states. If however we keep an internal state holding the last few photo stills it will
+        give us enough information to predict where the ball will be in the next frame. This is one way we can add a
+        markov property to the state where it wouldn't exist if we relied on information emitted from the environment
+        and this demonstrates an internal vs external state.
+    </p>
+</div>
+</body>
+</html>

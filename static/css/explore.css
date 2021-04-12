@@ -32,11 +32,26 @@
 
 .sidebar-item {
     padding: 4px 0;
-    color: #9A9A9A;
+}
+
+.sidebar-item-enabled {
+    color: #6b6a6a;
+}
+
+.sidebar-item-disabled {
+    color: #BCBCBC;
 }
 
 .sidebar-group li {
     padding-bottom: 0.7vmin;
+}
+
+.sidebar-item:hover {
+    cursor: pointer;
+}
+
+.sidebar-item-disabled:hover {
+    cursor: pointer;
 }
 
 #explore-gallery {

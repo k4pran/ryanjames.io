@@ -1,0 +1,48 @@
+<div id="REPLACE-ME-project-container" class="project-container modal">
+
+    <div id="REPLACE-ME-project" class="project">
+
+        <div class="project-title-row">
+            <h3 id="REPLACE-ME-title" class="project-title"><!--ENTER TITLE--></h3>
+            <hr class="hr-modal">
+        </div>
+
+        <div class="project-summary-row">
+            <div class="project-summary-media">
+                <!-- ENTER MEDIA <a href="/static/images/example.png" data-lity><img class="project-img-thumbnail" src="/static/images/example.png"></a>-->
+            </div>
+            <div class="project-info">
+                <ul class="project-languages">
+                    <li class="project-language"><!--ENTER LANGUAGES AND FRAMEWORKS--></li>
+                </ul>
+                <div class="share-icon-row">
+                    <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/github-share.png"></a>
+                    <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/fb-share.png"></a>
+                    <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/twitter-share.png"></a>
+                    <a href="https://github.com/ryanmccauley211/Oak"><img class="share-icon" src="/static/images/more-share.png"></a>
+                    <a href="#"><img class="share-icon-padding" src="/static/images/more-share.png"></a>
+                </div>
+                <p class="project-description">
+                    <!--ENTER DESCRIPTION-->
+                </p>
+            </div>
+        </div>
+
+        <div class="project-features-row">
+            <div class="project-features">
+                <h5 class="project-subheader">Features</h5>
+                <ul class="project-feature-list">
+                    <li><!--ADD FEATURE--></li>
+                    <li><!--ADD FEATURE--></li>
+                    <li><!--ADD FEATURE--></li>
+                </ul>
+            </div>
+            <div></div>
+        </div>
+
+        <div class="project-todo-row">
+            <div class="project-todos">
+            </div>
+        </div>
+    </div>
+</div>
