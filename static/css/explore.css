@@ -60,8 +60,8 @@
     display: grid;
     justify-content: space-around;
     grid-template-columns: repeat(auto-fill, 100%);
-    grid-template-rows: repeat(auto-fill, 250px);
-    grid-gap: 2%;
+    grid-auto-rows: 30%;
+    grid-gap: 3%;
 
     margin: 2vmin 0;
 }
@@ -83,15 +83,32 @@ hr {
 }
 
 .explore-gallery-element {
+    display: grid;
+    align-content: space-around;
     border: 3px groove #9A9A9A;
     border-radius: 8px 8px;
-    padding: 2vmin;
+    padding: 20px;
 }
 
 #explore-gallery-iris-1 {
     background-image: url("/static/images/iris.jpg");
     background-color: rgba(255, 255, 255, 0.7);
     background-blend-mode: lighten;
+    background-size: cover;
+}
+
+#explore-gallery-basic-reactive-operators {
+    background-image: url("/static/images/chain-reaction.jpg");
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+
+#explore-gallery-monte-carlo-blackjack {
+    background-image: url("/static/images/blackjack.jpg");
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 

@@ -20,15 +20,15 @@ func handleIndex(w http.ResponseWriter, _ *http.Request) {
 
 func handleExplore(w http.ResponseWriter, _ *http.Request) {
 	tmpl, err := template.ParseFiles("static/templates/explore.html")
-
-	checkCriticalErr(err)
-	_, err = tmpl.ParseGlob("static/templates/explore-templates/modals/*.html")
 	checkCriticalErr(err)
 
 	_, err = tmpl.ParseGlob("static/templates/explore-templates/summaries/*.html")
 	checkCriticalErr(err)
 
-	err = tmpl.ExecuteTemplate(w, "explore.html", getExploreTemplateAliases(tmpl))
+	_, err = tmpl.ParseGlob("static/templates/explore-templates/modals/*.html")
+	checkCriticalErr(err)
+
+	err = tmpl.ExecuteTemplate(w, "explore.html", nil)
 	checkCriticalErr(err)
 }
 
